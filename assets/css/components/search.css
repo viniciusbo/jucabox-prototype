@@ -1,0 +1,25 @@
+.search {
+	width: 100%;
+	text-align: center;
+}
+
+.search h1 {
+	margin: 1.2em 0;
+}
+
+.search h1:first-child {
+	margin-top: 0;
+}
+
+.search-results-wrapper {
+	overflow: hidden;
+}
+
+.search-results {
+
+}
+
+.search-results li {
+	list-style-type: none;
+	display: inline-block;
+}

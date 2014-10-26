@@ -1,0 +1,41 @@
+.assistant {
+	text-align: center;
+}
+
+.assistant-mini {
+	position: absolute;
+	left: 20px;
+	bottom: 30px;
+}
+
+.assistant-img img {
+	width: 200px;
+}
+
+.assistant-mini .assistant-img img {
+	width: 80px;
+}
+
+.assistant-phrase {
+	font-size: 2.8em;
+	margin: 1.2em 0;
+}
+
+.assistant-mic-wrapper {
+	display: inline-block;
+	position: relative;
+}
+
+.assistant-mic {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	color: #fff;
+	font-size: 40px;
+	line-height: 80px;
+	text-align: center;
+	background-color:#FE2222;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+}

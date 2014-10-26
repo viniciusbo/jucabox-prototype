@@ -1,0 +1,17 @@
+body, html, .container, .container-fluid {
+	height: 100%;
+}
+
+.view {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.view-active {
+	display: block;
+}
+
+.view-inactive {
+	display: none;
+}
