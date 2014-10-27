@@ -7,6 +7,7 @@
 	page('*', notFound);
 	page();
 
+	// Middleware
 	function load(ctx, next) {
 		$(document).ready(function() {
 			var $currentView = $('.view-active');
@@ -46,21 +47,28 @@
 		next();
 	}
 
+	// Index page
 	function index() {
-		$(function() {
+		JucaBox.listen();
+	}
 
+	// Search page
+	function search() {
+		JucaBox.listen();
+	}
+
+	// Player page
+	function play() {
+		JucaBox.listen();
+
+		$(document).ready(function() {
+			MediaPlayer.play();
 		});
 	}
 
-	function search() {
-
-	}
-
-	function play() {
-
-	}
-
+	// Page not found
 	function notFound() {
+		// Redirect to index
 		page('/');
 	}
 })();

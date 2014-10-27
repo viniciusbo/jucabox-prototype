@@ -15,17 +15,21 @@
 					<img src="assets/img/jenkins.jpg" width="200">
 				</div>
 
-				<h1 class="assistant-phrase">Diga, o que você quer ouvir? <span class="fa fa-music"></span></h1>
+				<h1 class="assistant-phrase">Me fale, o que você quer ouvir? <span class="fa fa-music"></span></h1>
 
 				<a href="./search" class="assistant-mic-wrapper animate-pulse">
 					<div class="assistant-mic assistant-mic-pulse"><span class="fa fa-microphone"></span></div>
 				</a>
 			</div>
+
+			<div class="overbox">
+				<h4><span class="fa fa-lightbulb-o"></span> Diga "Quero ouvir" antes do artista que você quer ouvir.</h4>
+			</div>
 		</div>
 
 		<div class="view view-inactive" data-route="/search">
 			<div class="search u-align-middle">
-				<h1>Resultados da busca para Chico Buarque</h1>
+				<h1>Resultados da busca para "Chico Buarque"</h1>
 
 				<div class="search-results-wrapper">
 					<ul class="search-results">
@@ -34,7 +38,7 @@
 								<div class="case cd">
 									<div>
 										<div class="img">
-											<span><img src="http://s2.vagalume.com/chico-buarque/discografia/chico-buarque-de-hollanda-W320.jpg"></span>
+											<span><img src="http://userserve-ak.last.fm/serve/_/44829085/Personalidade+0b0.jpg"></span>
 										</div>
 									</div>
 								</div>
@@ -123,39 +127,64 @@
 					</a>
 				</div>
 			</div>
+
+			<div class="overbox">
+				<h4><span class="fa fa-lightbulb-o"></span> Diga "Tocar" para tocar o álbum escolhido.</h4>
+			</div>
 		</div>
 
 		<div class="view view-inactive" data-route="/play">
 			<div class="player u-align-middle">
-				<ol class="player-song-list">
-					<li>Música #1</li>
-					<li>Música #2</li>
-					<li>Música #3</li>
-					<li>Música #4</li>
-					<li>Música #5</li>
-				</ol>
-
-				<div class="player-progress"></div>
-
 				<div class="player-controls">
-					<button type="button" class="btn btn-round"><span class="fa fa-fast-backward"></span></button>
-					<button type="button" class="btn btn-round btn-lg"><span class="fa fa-play"></span></button>
-					<button type="button" class="btn btn-round"><span class="fa fa-fast-forward"></span></button>
+					<button type="button" class="btn" id="do-prev-song"><span class="fa fa-fast-backward"></span> Anterior</button>
+					<button type="button" class="btn btn-lg" id="do-play-stop-song">Tocar <span class="fa fa-play"></span></button>
+					<button type="button" class="btn" id="do-next-song">Próxima <span class="fa fa-fast-forward"></span></button>
+				</div>
+
+				<div class="player-song-list-wrapper">
+					<ol class="player-song-list">
+						<li class="active" data-song-length="3:19">Deus lhe pague</li>
+						<li data-song-length="2:49">Cotidiano</li>
+						<li data-song-length="2:48">Desalento</li>
+						<li data-song-length="6:24">Construção</li>
+						<li data-song-length="2:1">Cordão</li>
+						<li data-song-length="3:56">Olha Maria (Amparo)</li>
+						<li data-song-length="2:40">Samba de Orly</li>
+						<li data-song-length="2:00">Valsinha</li>
+						<li data-song-length="3:01">Minha história</li>
+						<li data-song-length="1:38">Acalanto</li>
+					</ol>
+				</div>
+
+				<div class="player-progress">
+					<div class="player-progress-bar" style="width: 0%;">
+						<div class="player-progress-bar-label">
+							0:00
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div class="assistant-mini">
 				<div class="assistant-inner">
-					<a href="./" class="assistant-img animate-pulse-mini">
+					<a href="./" class="assistant-img animate-pulse-mini" class="do-listen">
 						<img src="assets/img/jenkins.jpg">
 					</a>
 				</div>
+			</div>
+
+			<div class="overbox">
+				<h4><span class="fa fa-lightbulb-o"></span> Comandos: "Próxima música", "Música anterior", "Parar música", "Tocar música".</h4>
 			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript" src="assets/js/vendor/jquery.js"></script>
 	<script type="text/javascript" src="assets/js/vendor/page.js"></script>
+	<script type="text/javascript" src="assets/js/vendor/eventemitter.js"></script>
+	<script type="text/javascript" src="assets/js/jucabox.js"></script>
+	<script type="text/javascript" src="assets/js/mediaplayer.js"></script>
 	<script type="text/javascript" src="assets/js/routes.js"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
